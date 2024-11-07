@@ -3,7 +3,7 @@ variable "policy_name" {
   type        = string
 } 
 resource "aws_organizations_policy" "deny_cloudtrail_deletion" {
-  name        = "var.policy_name"
+  name        = var.policy_name
   description = "all base scps"
   content     = <<POLICY
 {
